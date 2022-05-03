@@ -1,6 +1,126 @@
+.app{
+    font-family: sans-serif;
+}
+
 header{
-    width: 100vw;
-    position: fixed;
+    max-width: 100vw;
+    background-color: #0de;
+    display: flex;
+}
+
+h1{
+    margin: 50px 300px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: #0ab;
+}
+
+nav{
+    max-width: 100vw;
+    background-color: #0de;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.filterItem{
     color: white;
-    background-color: #4fd;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+main{
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 35px;
+}
+
+.card{
+    max-width: 100%;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #3331;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    transition: .5s;
+}
+
+.card.active{
+    display: flex;
+}
+
+
+.card::after{
+    content: '';
+
+}
+
+.respuesta{
+    margin-right: 25px;
+    font-size: 18px;
+    position: absolute;
+    visibility: hidden;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.pregunta{
+    margin-right: 25px;
+    font-size: 35px;
+    color: #0de;
+    font-weight: bold;
+    position: absolute;
+}
+
+.card:hover{
+    box-shadow: 0 8px 15px #3333;
+    transform: translateY(-25px);
+}
+
+.card:hover > .pregunta{
+    animation-name: legend;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes legend {
+    0%{
+        color: transparent;
+    }
+
+    50%{
+        font-size: 20px;
+        color: transparent;
+        top: 25px;
+        transform: translateY(-25px);
+    }
+    
+    100%{
+        font-size: 20px;
+        top: 25px;
+        color: #0de;
+        transform: translateY(0);
+    }
+}
+
+.card:hover > .respuesta{
+    visibility: visible;
+    opacity: 100;
+    transform: translateY(0);
 }
