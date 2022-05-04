@@ -1,0 +1,106 @@
+{
+    "title": "Colección de tarjetas con preguntas sobre BDNR",
+    "version": 0,
+    "list": [
+        {
+            "pregunta": "¿Qué es una base de datos no relacional? ¿Definición?",
+            "respuesta": "Las bases de datos no relacionales son un sistema de almacenamiento de información que se caracteriza por no usar el lenguaje SQL para las consultas. Esto no significa que no puedan usar el lenguaje SQL, pero no lo hacen como herramienta de consulta, sino como apoyo. Por ello también se les suele llamar NoSQL o «no solo SQL».",
+            "tag": "teoria"
+        },
+        {
+            "pregunta": "Características y funciones a tener en cuenta",
+            "respuesta": "La información no se almacena en tablas, sino a través de documentos; son bases de datos muy útiles para organizar y gestionar información no estructurada, son bases de datos con alto grado de escalabilidad, están diseñadas para soportar grandes volúmenes de datos.",
+            "tag": "ventaja"
+        },
+        {
+            "pregunta": "¿En qué se diferencian a nivel técnico de las BD relacionales?",
+            "respuesta": "A diferencia de las relacionales, no garantizan el cumplimiento de las cualidades ACID, esto es, atomicidad, consistencia, integridad y durabilidad, pero a cambio son BD fácilmente escalables y con una velocidad de consulta superior.",
+            "tag": "problema"
+        },
+        {
+            "pregunta": "¿Tiene alguna relación el lenguaje SQL con las BD no relacionales?",
+            "respuesta": "No utilizan el lenguaje SQL para consultas, aunque sí lo pueden usar como herramienta de apoyo.",
+            "tag": "funcionalidad"
+        },
+        {
+            "pregunta": "¿Existe un lenguaje estándar para programar BD NoSQL?",
+            "respuesta": "Es un sistema de almacenamiento de datos relativamente nuevo, y como tal, todavía no posee un sistema estandarizado, pero tiene una sintaxis muy común, además es intuitivo y tiene una curva de aprendizaje muy corta.",
+            "tag": "problema"
+        },
+        {
+            "pregunta": "¿Cómo se estructura la información?",
+            "respuesta": "La información se organiza en documentos o almacenes, que funcionan con una estructura de datos tipo clave-valor; normalmente guardan toda la información necesaria en un objeto para evitar perder tiempo buscando y relacionando campos como pasa en las bases de datos SQL.",
+            "tag": "ventaja"
+        },
+        {
+            "pregunta": "¿existe respaldo de una comunidad para las BD NoSql?",
+            "respuesta": "Aunque la comunidad no es tan grande porque las BD NoSQL son relativamente nuevas, cuenta con una comunidad profesional y altamente capacitada en las empresas donde fueron creadas estas tecnologías de base de datos, por lo tanto, cualquier problema o nueva funcionalidad está en manos de personal calificado.",
+            "tag": "problema"
+        },
+        {
+            "pregunta": "¿Qué hace exactamente a las BD NoSQL más fáciles de escalar?",
+            "respuesta": "Ofrecen una mayor escalabilidad. Pueden soportar mayores volúmenes de datos y añadir mayor capacidad añadiendo nuevos módulos de software (porciones de código que ejecutan una determinada tarea), sin necesidad de añadir nuevos servidores.",
+            "tag": "ventaja"
+        },
+        {
+            "pregunta": "¿Cuáles son los tipos de bases de datos no relacionales?",
+            "respuesta": "Existen 4 tipos de bases de datos no relacionales: Clave-Valor, Documentos, Gráficos, En Memoria.",
+            "tag": "funcionalidad"
+        },
+        {
+            "pregunta": "¿Qué son las bases de datos no relacionales de tipo clave-valor?",
+            "respuesta": "Se trata de bases de datos no relacionales que almacenan la información en base a pares de clave valor. Es decir, cada clave sirve como un identificador único, y a cada una de ellas se le aplica un valor. Son especialmente usadas a la hora de almacenar datos de juegos, aplicaciones o aparatos que funcionan mediante el internet de las cosas (IoT).",
+            "tag": "funcionalidad"
+        },
+        {
+            "pregunta": "¿Qué son las bases de datos no relacionales con estructura de documentos?",
+            "respuesta": "En una base de datos relacional basada en documentos la información se representa como objetos o documentos JSON. Su principal ventaja es que los documentos son de naturaleza flexible, semiestructurada y jerárquica, lo que facilita a los desarrolladores las tareas de almacenamiento, gestión y consulta de datos. Es un modelo usado habitualmente en sistemas de administración de contenidos o para gestionar perfiles de usuarios.",
+            "tag": "funcionalidad"
+        },
+        {
+            "pregunta": "¿Qué son las bases de datos no relacionales de tipo gráficas?",
+            "respuesta": "Las bases de datos no relacionales basadas en gráficos están pensadas para crear relaciones y navegar por ellas. Las entidades de datos se almacenan mediante nodos y los bordes son los que crear las relaciones entre entidades. Con frecuencia las bases de datos gráficas se emplean en redes sociales, sistemas de detección o prevención de fraudes o sistemas de recomendaciones.",
+            "tag": "funcionalidad"
+        },
+        {
+            "pregunta": "¿Qué son las bases de datos no relacionales en memoria?",
+            "respuesta": "Son bases de datos no relacionales diseñadas para ofrecer respuestas en milisegundos y soportar grandes picos de tráfico. Un ejemplo de bases de datos en memoria son las empleadas en tablas de clasificaciones de juegos o en herramientas para hacer análisis en tiempo real.",
+            "tag": "funcionalidad"
+        },
+        {
+            "pregunta": "¿Para qué sirve una base de datos no relacional?",
+            "respuesta": "Principalmente, las bases de datos no relacionales se emplean para almacenar datos no estructurados, o de los que no se tienen ningún esquema o información predefinida. Sin embargo, también pueden ser empleados para el almacenamiento y gestión de datos estructurados.",
+            "tag": "teoria"
+        },
+        {
+            "pregunta": "¿Cómo puede funcionar una base de dato sin estructura?",
+            "respuesta": "No lo hace, normalmente la estructura de una base de datos no relacional se basa en la organización de la información a través de documentos; cada uno de los documentos almacenados en la base de datos incluye todos los atributos del elemento, por lo que resultan muy útiles a la hora de guardar información poco estructurada o de la que no se tiene un esquema claro de inicio.",
+            "tag": "teoria"
+        },
+        {
+            "pregunta": "¿Cuándo aparecieron las bases de datos no relacionales?",
+            "respuesta": "finales de la década del 2000 que otros modelos de datos comenzaron a adoptarse y aumentó su uso significativamente. Para diferenciar y categorizar estas nuevas clases de bases de datos y modelos de datos, se acuñó el término NoSQL.",
+            "tag": "teoria"
+        },
+        {
+            "pregunta": "¿Qué es un gestor de bases de datos?",
+            "respuesta": "Un sistema gestor de base de datos o SGBD es un software que permite administrar una base de datos. Esto significa que mediante este programa se puede utilizar, configurar y extraer información almacenada.",
+            "tag": "teoria"
+        },
+        {
+            "pregunta": "Algunos gestores de bases de datos no relacionales",
+            "respuesta": "Los SGBD NoSQL más utilizados actualmente para administrar este tipo de bases de datos son: MongoDB, Redis y Cassandra.",
+            "tag": "teoria"
+        },
+        {
+            "pregunta": "¿Cuál es el origen de las bases de datos?",
+            "respuesta": "El ser humano siempre ha tenido la necesidad de guardar información es por ello que los orígenes de tener bases de datos provienen de la antigüedad en donde ya se tenía en existencia grandes bibliotecas y toda clase de registros entre ellos los que se llevaban de las cosechas",
+            "tag": "teoria"
+        },
+        {
+            "pregunta": "¿Qué le otorga tanto rendimiento a las BD NoSQL?",
+            "respuesta": "Garantizan un alto rendimiento, ya que están diseñadas para trabajar con modelos de datos concretos y patrones de acceso específicos.",
+            "tag": "ventaja"
+        }
+    ]
+}

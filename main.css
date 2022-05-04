@@ -1,5 +1,7 @@
 .app{
     font-family: sans-serif;
+    background-color: #fbfbfb;
+    min-height: 100vh;
 }
 
 header{
@@ -9,7 +11,7 @@ header{
 }
 
 h1{
-    margin: 50px 300px;
+    margin: 50px 200px;
     font-size: 50px;
     font-weight: bold;
     text-align: center;
@@ -40,7 +42,7 @@ main{
     padding: 50px 100px;
     display: grid;
     grid-template-columns: repeat(3, minmax(100px, 1fr));
-    grid-auto-rows: 300px;
+    grid-auto-rows: 375px;
     gap: 35px;
 }
 
@@ -63,7 +65,6 @@ main{
     display: flex;
 }
 
-
 .card::after{
     content: '';
 
@@ -77,26 +78,51 @@ main{
     transform: translateY(100px);
     opacity: 0;
     transition: .5s;
+    background-color: white;
 }
 
 .pregunta{
     margin-right: 25px;
-    font-size: 35px;
+    font-size: 30px;
     color: #0de;
     font-weight: bold;
     position: absolute;
+    animation-name: slide;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 .card:hover{
     box-shadow: 0 8px 15px #3333;
+    background-color: white;
     transform: translateY(-25px);
 }
 
 .card:hover > .pregunta{
+    color: white;
     animation-name: legend;
     animation-duration: .5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0%{
+        color: transparent;
+    }
+
+    50%{
+        font-size: 30px;
+        color: transparent;
+        transform: translateY(-25px);
+    }
+    
+    100%{
+        font-size: 30px;
+        color: #0de;
+        transform: translateY(0);
+    }
 }
 
 @keyframes legend {
@@ -120,7 +146,55 @@ main{
 }
 
 .card:hover > .respuesta{
+    color: #333;
     visibility: visible;
     opacity: 100;
     transform: translateY(0);
+}
+
+@media (max-width: 920px){
+    main{
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        padding: 50px;
+    }
+
+    h1{
+        margin: 25px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 750px){
+    main{
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    nav{
+        max-width: 100vw;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .filterItem{
+        margin: 0;
+        display: block;
+    }
+
+    .card:hover{
+        transform: translateY(0);
+    }
+
+    h1{
+        margin: 25px;
+        font-size: 30px;
+    }
+
+    h2{
+        font-size: 25px;
+    }
 }
