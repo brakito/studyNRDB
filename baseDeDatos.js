@@ -40,8 +40,8 @@ IDBRequest.addEventListener("success", () =>{
 		}
 		showCards(data.list)
 		if (data.version == valorCookie){
-			valorCookie = parseInt(valorCookie, 10) + 1;
-			document.cookie = `datosCargados=${valorCookie}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+			// valorCookie = parseInt(valorCookie, 10) + 1;
+			// document.cookie = `datosCargados=${valorCookie}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
 			// addToDatabase(data.list);
 		} else {
 			console.log("nada para agregar");
