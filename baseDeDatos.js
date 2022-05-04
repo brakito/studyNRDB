@@ -7,6 +7,16 @@ function addToDatabase(list) {
 	}
 }
 
+function showCards(list) {
+	const fragment = new DocumentFragment;
+	for (card of list){
+		// addObject(card);
+		let cardR = createCard(card);
+		fragment.appendChild(cardR);
+	}
+	contenedor.appendChild(fragment);
+}
+
 // -> Creacion de base de datos
 const IDBRequest = indexedDB.open("equipo2DB", 1);
 IDBRequest.addEventListener("upgradeneeded", () =>{
@@ -27,15 +37,17 @@ IDBRequest.addEventListener("success", () =>{
 			console.log("se creo una cookie");
 			document.cookie = `datosCargados=0; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
 			valorCookie = document.cookie.replace(/(?:(?:^|.*;\s*)datosCargados\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-		} else if (data.version == valorCookie){
-			addToDatabase(data.list);
+		}
+		showCards(data.list)
+		if (data.version == valorCookie){
 			valorCookie = parseInt(valorCookie, 10) + 1;
 			document.cookie = `datosCargados=${valorCookie}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+			// addToDatabase(data.list);
 		} else {
 			console.log("nada para agregar");
+			readAllObjects();
 		}
 	});
-	readAllObjects();
 });
 
 IDBRequest.addEventListener("error", () =>{
@@ -89,13 +101,13 @@ function readAllObjects() {
 	const fragment = new DocumentFragment;
 	cursor.addEventListener("success", () =>{
 		if (cursor.result) {
-			let card = createCard(cursor.result.value)
+			let card = createCard(cursor.result.value);
 			// console.log(card)
 			fragment.appendChild(card);
 			cursor.result.continue();
 		} else {
 			// console.log("todos los objetos fueron leidos");
-			contenedor.appendChild(fragment)
+			contenedor.appendChild(fragment);
 		}
 	});
 }
